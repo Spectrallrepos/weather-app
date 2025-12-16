@@ -3,10 +3,52 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="styles.css">
     <title>weather-app</title>
 </head>
 <body>
-    
+    <div id = "overlay"></div>
+    <nav>
+        <ul>
+            <li><a href="#">Home</a></li>
+            <li><a href="#">About</a></li>
+            <li><a href="#">Contact</a></li>
+    </nav>
+    <div id = "card">
+        <div class = "details">
+            <div id = "search">
+                <input type="text" id="cityInput" placeholder="Enter city name">
+                <button id="getWeatherBtn">🔎</button>
+                <div id = "shadow"></div>
+            </div>
+            <div id = "mainDetails">
+                <h1>city</h1>
+                <h2>temperature</h2>
+                <p>description</p>
+            </div>
+            <div id = "otherDetails">
+                <div>
+                    <h3>Humidity</h3>
+                    <p>value</p>
+                </div>
+                <div>
+                    <h3>Wind Speed</h3>
+                    <p>value</p>
+                </div>
+                <div>
+                    <h3>Pressure</h3>
+                    <p>value</p>
+                </div>
+                <div>
+                    <h3>UV</h3>
+                    <p>value</p>
+                </div>
+            </div>
+        </div>
+    </div>
+    <footer>
+        <p>Created by Your Name</p>
+    </footer>
 </body>
 <script src="script.js"></script>
 </html>
