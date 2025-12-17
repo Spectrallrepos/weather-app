@@ -48,7 +48,7 @@ function displaymainDetails(weatherData) {
         <h1>${weatherData.location.name}</h1>
         <h2>${weatherData.current.temp_c}°C</h2>
         <p>${weatherData.current.condition.text}</p>
-        <img src="https:${weatherData.current.condition.icon}" alt="Weather Icon">
+        <img width="100" src="https:${weatherData.current.condition.icon}" alt="Weather Icon">
     `;
 }
 //other Details

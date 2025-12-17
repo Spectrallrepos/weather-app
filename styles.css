@@ -58,7 +58,7 @@ html{
     position: relative;
 }
 #footer a{
-    color: white;
+    color: rgb(180, 179, 179);
     text-decoration: none;
     margin-bottom: 1rem;
     margin-left:20px;
@@ -152,6 +152,17 @@ html{
     flex-direction: column;
     align-items: center;
     justify-content: center;
+    text-align: center;
+    width: 100%;
+    padding: 10px;
+    box-sizing: border-box;
+}
+#mainDetails h1,
+#mainDetails h2,
+#mainDetails p{
+    margin: 5px 0;
+    word-wrap: break-word;
+    max-width: 100%;
 }
 
 /*Other Details Section*/
@@ -178,4 +189,38 @@ html{
 }
 #otherDetails div>p{
     font-size: 1.5rem;
+}
+
+/* Mobile Media Query */
+@media (max-width: 768px){
+    .details{
+        grid-template-rows: auto 1fr 1fr;
+        grid-template-columns: 1fr;
+        grid-template-areas:
+            "search"
+            "info"
+            "otherInfo";
+    }
+    
+    #search{
+        grid-area: search;
+        margin-left: 5%;
+        margin-right: 5%;
+    }
+    
+    #card{
+        width: 90%;
+        height: 85%;
+    }
+    
+    #otherDetails{
+        border-left: none;
+        border-top: 1px solid rgba(255, 255, 255, 0.2);
+        margin-top: 10px;
+        padding-top: 20px;
+    }
+    
+    #otherDetails div{
+        width: 40%;
+    }
 }
