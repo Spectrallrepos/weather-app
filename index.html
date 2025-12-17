@@ -3,6 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" type="image/png" href="weather.png">
     <link rel="stylesheet" href="styles.css">
     <title>weather-app</title>
 </head>
@@ -18,7 +19,7 @@
     <div id = "card">
         <div class = "details">
             <form id = "search">
-                <input type="text" id="cityInput" placeholder="Enter city name">
+                <input type="text" id="cityInput" placeholder="Enter city, state name">
                 <button id="getWeatherBtn">🔎</button>
                 <div id = "shadow"></div>
             </form>
@@ -38,16 +39,23 @@
                     <p id = "pressure"></p>
                 </div>
                 <div>
-                    <h3>UV</h3>
+                    <h3>UV index</h3>
                     <p id = "uv"></p>
                 </div>
             </div>
         </div>
     </div>
     <footer id="footer">
-        <p>Created by Your Name</p>
-        <p>Created by Your Name</p>
-        <p>Created by Your Name</p>
+        <div class = "socials">
+            <a href = "" target = "_blank"><img src = "icons\\instagram.png" alt = "instagram"></a>
+            <a href = "" target = "_blank"><img src = "icons\\linkedin.png" alt = "linkedin"></a>
+            <a href = "" target = "_blank"><img src = "icons\\github.png" alt = "gitHub"></a>
+        </div>
+        <a href = "About.html" target = "_blank">About this project</a>
+        <a href = "copyright.html" target = "_blank">Copyright Information</a>
+        <a href = "terms.html" target = "_blank">Terms and Conditions</a>
+        </div>
+        <a href = "#top">Back to top</a>
     </footer>
 </body>
 <script src="script.js"></script>

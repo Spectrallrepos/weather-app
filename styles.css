@@ -6,18 +6,22 @@ body{
     background-position: center;
     background-repeat: no-repeat;
     background-attachment: fixed;
-    height: 120vh;
+    height: 130vh;
     display: grid;
-    grid-template-rows: auto 1fr 20vh;
+    grid-template-rows: auto 1fr 30vh;
     grid-template-columns: 1fr;
     grid-template-areas:
     "navbar"
     "body"
     "footer";
     overflow-y:auto;
+    overflow-x: hidden;
 }
 nav{
     grid-area: navbar;
+    position: sticky;
+    top: 0;
+    z-index: 1000;
 }
 nav>ul{
     list-style: none;
@@ -28,8 +32,6 @@ nav>ul{
     padding: 10px;
     margin: 0;
     background-color: rgba(29, 29, 29, 0.9);
-    position: sticky;
-    top: 0;
     border-radius: 0 0 10px 10px;
 }
 nav>ul>li>a{
@@ -38,15 +40,33 @@ nav>ul>li>a{
     font-size: 1.2rem;
     cursor: pointer;
 }
+nav>ul>li>a:hover{
+    color: #76a9fa;
+    transition: all 0.3s ease-in-out;
+}
 html{
     scroll-behavior: smooth;
 }
-footer{
+/*Footer Section*/
+#footer{
     grid-area: footer;
-    background-color: rgba(29, 29, 29, 0.9);
+    background-color: rgba(20, 20, 20, 0.9);
+    font-size: 1rem;
+    display:  flex;
+    flex-direction: column;
+    justify-content: flex-end;
+    position: relative;
+}
+#footer a{
     color: white;
     text-decoration: none;
-    font-size: 1rem;
+    margin-bottom: 1rem;
+    margin-left:20px;
+}
+.socials{
+    display: flex;
+    justify-content: center;
+    gap: 20px;
 }
 #overlay{
     position: absolute;
@@ -100,6 +120,14 @@ footer{
     padding: 10px;
     font-size: 1.2rem;
 }
+#search input:hover{
+    background-color: rgba(29, 29, 29, 0.9);
+    transition: all 0.3s ease-in-out;
+}
+#search input:focus{
+    outline: none;
+    border: 1px solid #d1d2d3;
+}
 #getWeatherBtn{
     height: 100%;
     width: auto;
@@ -112,7 +140,7 @@ footer{
     cursor: pointer;
 }
 #getWeatherBtn:hover{
-    background-color: rgba(29, 29, 29, 0);
+    background-color: rgba(29, 29, 29, 0.9);
     transform: scale(1.1);
     transition: all 0.3s ease-in-out;
 }
