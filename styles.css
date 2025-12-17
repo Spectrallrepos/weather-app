@@ -1,7 +1,7 @@
 body{
     margin: 0;
     padding: 0;
-    background-image: url('https://github.com/Spectrallrepos/weather-app/blob/master/bg-img/clouds.png?raw=true');
+    background-image: url('https://github.com/Spectrallrepos/weather-app/blob/master/bg-img/storm.jpg?raw=true');
     background-size: cover;
     background-position: center;
     background-repeat: no-repeat;
@@ -39,6 +39,10 @@ nav>ul>li>a{
 }
 footer{
     grid-area: footer;
+    background-color: rgba(29, 29, 29, 0.9);
+    color: white;
+    text-decoration: none;
+    font-size: 1rem;
 }
 #overlay{
     position: absolute;
@@ -98,7 +102,7 @@ footer{
     border: none;
     border-radius: 10px;
     font-size: 1.6rem;
-    margin: 10px;
+    margin-top: 15px;
     background-color: rgba(0, 0, 0, 0.3);
     color: white;
     cursor: pointer;
@@ -136,5 +140,5 @@ footer{
     padding: 10px;
 }
 #otherDetails div>p{
-    font-size: 2.5rem;
+    font-size: 1.5rem;
 }
