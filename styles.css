@@ -57,7 +57,7 @@ html{
     justify-content: flex-end;
     position: relative;
 }
-#footer a{
+#footer a, #footer p{
     color: rgb(180, 179, 179);
     text-decoration: none;
     margin-bottom: 1rem;
