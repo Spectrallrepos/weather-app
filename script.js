@@ -31,6 +31,7 @@ search.addEventListener("submit", async event => {
             displaymainDetails(weatherData); //We call the function to display details
             displayotherDetails(weatherData);
             updateBg(weatherData);
+            cityInput.value = ''; //Clear the input field after search
         }
         catch(error){
             displayError("City not found");
@@ -74,7 +75,7 @@ function updateBg(weatherData) {
     if (current.condition.code == 1000) { //clear or sunny
         body.style.backgroundImage = "url('https://github.com/Spectrallrepos/weather-app/blob/master/bg-img/beach.jpg?raw=true')";
     }
-    else if ((current.condition.code >= 1003 && current.condition.code <= 1030) || current.condition.code == 1135 || current.condition.code == 1147) {
+    else if (current.condition.code == 1003 || (current.condition.code >= 1007 && current.condition.code <= 1030) || current.condition.code == 1135 || current.condition.code == 1147) {
         body.style.backgroundImage = "url('https://github.com/Spectrallrepos/weather-app/blob/master/bg-img/clouds.png?raw=true')";
     }//for foggy conditions or clouds 
     else if ((current.condition.code >= 1063 && current.condition.code <= 1087) || (current.condition.code >= 1150 && current.condition.code <= 1201) || (current.condition.code >= 1240 && current.condition.code <= 1246) || (current.condition.code >= 1273 && current.condition.code <= 1282)) {
@@ -83,4 +84,8 @@ function updateBg(weatherData) {
     else if ((current.condition.code >= 1204 && current.condition.code <= 1237) || (current.condition.code >= 1249 && current.condition.code <= 1282)) {
         body.style.backgroundImage = "url('https://github.com/Spectrallrepos/weather-app/blob/master/bg-img/snowflakes.jpg?raw=true')";
     }//for snowy conditions
+    else {
+        body.style.backgroundImage = "url('https://github.com/Spectrallrepos/weather-app/blob/master/bg-img/storm.jpg?raw=true')";
+    }
 }
+
